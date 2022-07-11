@@ -1,0 +1,117 @@
+:root{
+    --mainRed: hsl(0, 78%, 62%);
+    --maincyan: hsl(180, 62%, 55%);
+    --MainOrange: hsl(34, 97%, 64%);
+    --MainBlue: hsl(212, 86%, 64%);
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+body{
+    background-color: white;
+
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    /* background-color: black; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+    margin-top: -70px;
+    position: relative;
+
+}
+
+.headings{
+    text-align: center;
+    margin-top: 100px;
+}
+.headings h1:first-child{
+    font-weight: 200;
+    color: var(--GrayishBlue)
+}
+.headings h1:nth-child(2){
+    margin-top: -10px;
+    color: var(--VeryDarkBlue)
+}
+p{
+    color: var(--GrayishBlue);
+    max-width: 541px;
+}
+.boxes{
+    position: absolute;
+    /* margin-top: 30%; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    /* flex-flow: ; */
+    top: 150px;
+    transform: translate(0 , 50%);
+}
+.boxes .box-one,.box-two , .box-three , .box-four{
+    
+    height:250px;
+    width: 350px;
+    /* min-width: 300;
+    max-width: 350; */
+    background-color: var(--VeryLightGray);
+    margin: 0 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 11px -4px black;
+    padding: 15px;
+    position: relative;
+}
+.box-two{
+    border-top: 3px solid var(--mainRed);
+    align-self: flex-start;
+    
+
+    /* margin-top:-200px ; */
+}
+.box-four{
+    border-top: 3px solid var(--MainOrange);
+    align-self: flex-end;
+    /* margin-top:-100px ; */
+}
+.box-one{
+    /* align-self: center; */
+    border-top: 3px solid var(--maincyan);
+}
+.box-three{
+    align-self: center;
+    border-top: 3px solid var(--MainBlue);
+}
+h2{
+    text-align: left;
+    font-weight: 600;
+    color: var(--VeryDarkBlue);
+}
+.boxes .p{
+    text-align: left;
+}
+svg{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+@media (max-width:767px){
+    .boxes{
+        top: 0;
+    }
+    .headings h1:nth-child(2) {
+        margin-top: -10px;
+        color: var(--VeryDarkBlue);
+        font-size: 1.5em;}
+        .headings h1:first-child {
+            font-weight: 200;
+            color: var(--GrayishBlue);
+            font-size: 1.5em;}
+}
